@@ -1,0 +1,294 @@
+/* =========================
+   RESET & FONT
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   BODY – GRADIENT BACKGROUND
+   ========================= */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    overflow: hidden;
+}
+
+/* =========================
+   CONTAINER – GLASS CARD
+   ========================= */
+.container {
+    width: 100%;
+    max-width: 380px;
+    padding: 2.5rem 2rem;
+    background: rgba(255, 255, 255, 0.15); /* transparent */
+    backdrop-filter: blur(12px);           /* frosted glass */
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+}
+
+/* =========================
+   FORM TITLE
+   ========================= */
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* =========================
+   INPUT GROUP & ICONS
+   ========================= */
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+/* Icons */
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #eee;
+    font-size: 1rem;
+}
+
+/* =========================
+   INPUT FIELD
+   ========================= */
+input {
+    width: 100%;
+    padding: 14px 12px 14px 42px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.1);
+    font-size: 0.95rem;
+    color: #fff;
+    line-height: normal;
+    transition: 0.3s ease all;
+}
+
+/* Placeholder hidden (for floating label) */
+input::placeholder {
+    color: transparent;
+}
+
+/* Label floating effect */
+.input-group label {
+    position: absolute;
+    left: 42px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #eee;
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+/* Move label up when typing or focus */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 0.75rem;
+    color: #00c6ff;
+    background: rgba(255,255,255,0.15);
+    padding: 0 4px;
+}
+
+/* Input focus effect */
+input:focus {
+    outline: none;
+    border: 1px solid #00c6ff;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 10px rgba(0,198,255,0.5);
+}
+
+/* =========================
+   BUTTON – GLASS EFFECT
+   ========================= */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    background: rgba(0,198,255,0.5);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease all;
+}
+
+.btn:hover {
+    background: rgba(0,198,255,0.7);
+    box-shadow: 0 0 15px rgba(0,198,255,0.6);
+}
+
+/* =========================
+   RECOVER LINK
+   ========================= */
+.recover {
+    text-align: right;
+    margin: 0.8rem 0 1rem;
+}
+
+.recover a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+/* =========================
+   OR DIVIDER
+   ========================= */
+.or {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 1.5rem 0;
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+.or::before,
+.or::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+}
+
+/* =========================
+   SOCIAL ICONS
+   ========================= */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons i {
+    font-size: 1.4rem;
+    color: #00c6ff;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.icons i:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+/* =========================
+   BOTTOM LINKS
+   ========================= */
+.links {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.links button {
+    background: none;
+    border: none;
+    color: #00c6ff;
+    font-weight: 500;
+    cursor: pointer;
+}
+/* =========================
+   RECOVER / RESET PASSWORD
+   ========================= */
+
+/* Message text (success / error) */
+.message {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* Message links */
+.message a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
+
+/* Back to login link */
+.back-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.back-link a {
+    color: #00c6ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Recover / Reset specific spacing */
+.container.recover-container {
+    padding-top: 2.8rem;
+}
+
+/* Disable social icons on recover pages (if present) */
+.recover-page .icons {
+    display: none;
+}
+/* =========================
+   SHOW / HIDE PASSWORD
+========================= */
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ccc;
+}
+
+.toggle-password:hover {
+    color: #00c6ff;
+}
+
+/* =========================
+   PASSWORD STRENGTH
+========================= */
+.strength {
+    margin-top: 10px;
+}
+
+.strength-bar {
+    height: 6px;
+    width: 0%;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#strengthText {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
